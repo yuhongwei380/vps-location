@@ -1,15 +1,21 @@
 
-## 1.需要NODEJS 和依赖
+## 1.需要NODEJS 和依赖以及chrome
 
-安装方法参照官方教程:
+### 1.1 NodeJS安装方法参照官方教程:
 
 https://nodejs.org/zh-cn/download
 
-依赖：
+### 1.2 依赖：
 ```
 PUPPETEER_SKIP_DOWNLOAD=true npm install puppeteer puppeteer-extra puppeteer-extra-plugin-stealth
 ```
-
+### 1.3 chrome
+```
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+sudo apt-get update -y
+sudo apt-get install google-chrome-stable -y
+```
 ## 2.配置启动脚本和运行：
 ```
 mkdir -p /root/google-location-fixer/
