@@ -1,4 +1,3 @@
-cat << 'EOF' > /root/google-location-fixer/index.js
 console.log(`[${new Date().toLocaleString()}] === Script started ===`);
 const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
@@ -140,4 +139,4 @@ async function run() {
 
 run();
 console.log(`[${new Date().toLocaleString()}] === Script finished ===`);
-EOF
+
